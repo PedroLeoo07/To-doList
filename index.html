@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <div class="input-container">
+            <input type="text" id="tarefa" placeholder="Digite os seus afazeres">
+            <button onclick="adcTarefa()">Adicionar</button>
+        </div>
+        <div id="listaTarefas"></div>
+    </div>
 </body>
 </html>
