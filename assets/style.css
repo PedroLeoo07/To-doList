@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #ffffff, #000000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 15px;
+    background-image: url(/img/corithians.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ff0000;
+}
+
+.container{
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover{
+    transform: scale(1.02);
+}
+
+h1{
+    color: #ff0000;
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.input-container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 2px solid #ff0000;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input:focus{
+    border-color: #ff0000;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+button:hover{
+    background: #ff8a8a;
+}
+
+#listaTarefas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarefa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff0000;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tarefa:hover{
+    transform: scale(1.02);
+}
+
+.tarefa button{
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.tarefa button:hover{
+    background: darkred;
+}
