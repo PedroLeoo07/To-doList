@@ -1,37 +1,35 @@
-let tarefas = [];
+let tasks = [];
 
-function adcTarefa(){
-    let listaTarefas = document.getElementById("listaTarefas");
-    let tarefa = listaTarefas.value.trim();
+function addTask() {
+    let taskInput = document.getElementById("taskInput");
+    let taskText = taskInput.value.trim();
 
-    if (tarefa === "") {
-        alert("Digite alguma tarefa");
+    if (taskText === "") {
+        alert("Por favor, digite uma tarefa!");
         return;
     }
 
-    tarefas.push(tarefa);
-    listaTarefas.value = "";
-
-    updateListaTarefas();
+    tasks.push(taskText); 
+    taskInput.value = ""; 
+    updateTaskList(); 
 }
 
-function removeTarefa(index){
-    tarefas.splice(index, 1);
-    updateListaTarefas();
+function removeTask(index) {
+    tasks.splice(index, 1); 
+    updateTaskList(); 
 }
 
-function updateListaTarefas(){
-    let listaTarefas = document.getElementById("listaTarefas");
-    listaTarefas.innerHTML = "";
+function updateTaskList() {
+    let taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
 
-    tarefas.forEach((tarefa, index) => {
-        let tarefaDiv = document.createElement("div");
-        tarefaDiv.className = "tarefa";
-        tarefaDiv.innerHTML = `
-            <span>${tarefa}</span>
-            <button onclick="removeTarefa(${index})">Remover</button>
+    tasks.forEach((task, index) => {
+        let taskDiv = document.createElement("div");
+        taskDiv.className = "task";
+        taskDiv.innerHTML = `
+            <span>${task}</span>
+            <button onclick="removeTask(${index})">Remover</button>
         `;
-        listaTarefas.appendChild(tarefaDiv);
+        taskList.appendChild(taskDiv);
     });
-
 }

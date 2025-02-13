@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en, pt-br">
+<html lang="pt-br, en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
     <link rel="stylesheet" href="/assets/style.css">
-    <script src="script.js"></script>
-    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
 </head>
 <body>
+
     <div class="container">
         <h1>Lista de Tarefas ✅</h1>
         <div class="input-container">
-            <input type="text" id="tarefa" placeholder="Digite os seus afazeres">
-            <button onclick="adcTarefa()">Adicionar</button>
+            <input type="text" id="taskInput" placeholder="Digite uma tarefa...">
+            <button onclick="addTask()">Adicionar</button>
         </div>
-        <div id="listaTarefas"></div>
+        <div id="taskList"></div> 
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
