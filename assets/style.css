@@ -13,6 +13,10 @@ body{
     min-height: 90vh;
     padding: 15px;
     color: #ff0000;
+    background-image: url("/img/corithians.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container{
